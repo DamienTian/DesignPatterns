@@ -1,5 +1,5 @@
 # DesignPatterns
- This dir contains my implementation experiments of different design patterns.
+ This dir contains my c++ implementation experiments of different design patterns.
  ## Design Patterns:
   [1] [Strategy Pattern](https://github.com/DamienTian/DesignPatterns/tree/main/StrategyPattern)
 
