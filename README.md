@@ -2,6 +2,7 @@
  This dir contains my c++ implementation experiments of different design patterns.
  ## Design Patterns:
   [1] [Strategy Pattern](https://github.com/DamienTian/DesignPatterns/tree/main/StrategyPattern)
+  
   [2] [Observer Pattern](https://www.newthinktank.com/2012/08/observer-design-pattern-tutorial)
 
 ## Acknowledgement
