@@ -3,11 +3,13 @@
 
 #pragma once
 
+#include <string>
+
 class ESWeapon
 {
 public:
     virtual ~ESWeapon(){}
-    virtual std::string toString() = 0;
+    const virtual std::string toString() = 0;
 };
 
 #endif

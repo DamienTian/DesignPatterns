@@ -1,11 +1,17 @@
 #include "EnemyShip.h"
 
 EnemyShip::EnemyShip(){}
-EnemyShip::~EnemyShip(){}
+EnemyShip::~EnemyShip(){
+    if(weapon)
+        delete weapon;
+    if(engine)
+        delete engine;
+}
 
 void EnemyShip::followHeroShip()
 {
-    std::cout << getName() << " is following the hero" << std::endl;
+    ESEngine* e = getEngine();
+    std::cout << getName() << " is following the hero by " << e->toString() << std::endl;
 }
 
 void EnemyShip::displayEnemyShip()
@@ -15,5 +21,6 @@ void EnemyShip::displayEnemyShip()
 
 void EnemyShip::enemyShipShoots()
 {
-    std::cout << getName() << " attacks and does " << getDamage() << " damage to hero" << std::endl;
+    ESWeapon* w = getWeapon();
+    std::cout << getName() << " attacks and does damage to hero by " << w->toString() << std::endl;
 }

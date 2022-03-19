@@ -9,7 +9,7 @@ class ESEngine
 {
 public:
     virtual ~ESEngine(){}
-    virtual std::string toString() = 0;
+    const virtual std::string toString() = 0;
 };
 
 #endif

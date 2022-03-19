@@ -8,21 +8,28 @@
 
 #include "ESWeapon.h"
 #include "ESEngine.h"
+#include "EnemyShipFactory.h"
 
 class EnemyShip
 {
 public:
     EnemyShip();
-    virtual ~EnemyShip();
+    ~EnemyShip();
 
-    const std::string getName() { return name; }
+    std::string getName() const { return name; }
     void setName(std::string newName) { name = newName; }
 
-    const double getSpeed() { return speed; }
+    double getSpeed() const { return speed; }
     void setSpeed(double newSpeed) { speed = newSpeed; }
 
-    const double getDamage() { return damageAmount; }
+    double getDamage() const { return damageAmount; }
     void setDamage(double newDamageAmount) { damageAmount = newDamageAmount; }
+
+    ESWeapon* getWeapon() const { return weapon; }
+    void setWeapon(ESWeapon* newWeapon) { weapon = newWeapon; }
+
+    ESEngine* getEngine() const { return engine; }
+    void setEigine(ESEngine* newEngine) { engine = newEngine; }
 
     void followHeroShip();
     void displayEnemyShip();
