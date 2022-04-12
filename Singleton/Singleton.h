@@ -9,6 +9,9 @@
 #include <memory>
 #include <chrono>
 #include <thread>
+#include <mutex>
+#include <random>
+#include <algorithm>
 
 // ref - how to build singleton in C++ : https://refactoringguru.cn/design-patterns/singleton/cpp/example
 class Singleton
@@ -44,5 +47,13 @@ private:
                                           "r", "r", "s", "s", "s", "s", "t", "t", "t", "t", "t", "t", "u",
                                           "u", "u", "u", "v", "v", "w", "w", "x", "y", "y", "z"};
 };
+
+template<class T>
+void printList(std::list<T> list){
+    std::cout << '[';
+    for(auto t : list)
+        std::cout << t << ',';
+    std::cout << ']' << std::endl;
+}
 
 #endif

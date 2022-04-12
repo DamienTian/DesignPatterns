@@ -1,12 +1,4 @@
-#include "Singleton.h"
-
-template<class T>
-void printList(std::list<T> list){
-    std::cout << '[';
-    for(auto t : list)
-        std::cout << t << ',';
-    std::cout << ']' << std::endl;
-}
+#include "GetTheTiles.h"
 
 void scrabbleTest(){
     // create first singleton
@@ -28,8 +20,19 @@ void scrabbleTest(){
     // printList(newInstance->getLetterList());
 }
 
+void scrabbleMultithreadTest(){
+    GetTheTiles g1, g2;
+
+    std::thread getTiles1(g1);
+    std::thread getTiles2(g2);
+
+    getTiles1.join();
+    getTiles2.join();
+}
+
 int main(){
-    scrabbleTest();
+    // scrabbleTest();
+    scrabbleMultithreadTest();
 
     return 0;
 }

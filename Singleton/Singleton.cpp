@@ -30,7 +30,9 @@ Singleton *Singleton::getInstance()
                 std::cerr << "Caught Error: Something went wrong with Singleton multithreading" << std::endl;
             }
         }
+        // TODO: solve multithread not working issue (https://codereview.stackexchange.com/questions/105739/porting-javas-synchronized-block-to-c)
         instance = new Singleton();
+        // skip shuffle
     }
     return instance;
 }
